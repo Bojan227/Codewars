@@ -20,23 +20,34 @@ dnaStrand [A,A,A,A] `shouldBe` [T,T,T,T] */
 
 
 
+// function DNAStrand(dna){
+//     let result = []
+//   let splitted = dna.split('')
+//   splitted.forEach(x => {
+//     if(x === "A"){
+//       result.push('T')
+//     }else if (x === 'T'){
+//       result.push('A')
+//     }else if(x === 'G'){
+//       result.push('C')
+//     }else if(x === 'C'){
+//       result.push('G')
+//     }else {
+//       return []
+//     }
+
+
+//   })
+//   return result.join('')
+//   }
+
+
+//  refactored
 function DNAStrand(dna){
-    let result = []
-  let splitted = dna.split('')
-  splitted.forEach(x => {
-    if(x === "A"){
-      result.push('T')
-    }else if (x === 'T'){
-      result.push('A')
-    }else if(x === 'G'){
-      result.push('C')
-    }else if(x === 'C'){
-      result.push('G')
-    }else {
-      return []
-    }
+
+    let results = {"A": "T", "T": "A", "G": "C", "C": "G"}
+
+    return dna.split('').map(x=> results[x]).join('')
 
 
-  })
-  return result.join('')
-  }
+}
