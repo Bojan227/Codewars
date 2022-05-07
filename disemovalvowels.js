@@ -12,6 +12,10 @@ Note: for this kata y isn't considered a vowel.*/
 function disemvowel(str) {
     let vowels = ['a', 'e', 'o', 'u', 'i']
     return str.split('').filter(value=>{
-        return vowels.indexOf(value.toLowerCase()) == -1
+        
+        console.log(vowels.indexOf(value.toLowerCase()))
+
+        // Will return every letter that is not in the vowels array, will have index equals to -1.
+        return vowels.indexOf(value.toLowerCase()) === -1
     }).join('')
   }
