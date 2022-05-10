@@ -8,11 +8,16 @@ Input: 145263 Output: 654321
 
 Input: 123456789 Output: 9876543218*/
 
-
+// refactored
 function descendingOrder(n){
-   let toArray = String(n).split('')
-   let reordered = toArray.sort((a,b)=>b-a)
-   
-   return parseInt(reordered.join(''))
+ return parseInt(String(n).split('').sort((a,b)=>b-a).join(''))  
+   }
 
-  }
+
+// function descendingOrder(n){
+//    let toArray = String(n).split('')
+//    let reordered = toArray.sort((a,b)=>b-a)
+   
+//    return parseInt(reordered.join(''))
+
+//   }
