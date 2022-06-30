@@ -36,3 +36,4 @@ function minValue(values){
   
     return parseInt(filterDuplicates.sort().join(''))
     }
+    
