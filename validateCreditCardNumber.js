@@ -80,7 +80,4 @@ function validate(n){
       })
       return mapped.reduce((a,b)=> a + parseInt(b), 0) % 10 === 0 ? true : false
     }
-  
-  
-  
   }
