@@ -31,12 +31,15 @@ function sumConsecutives(s) {
       for(let  i = 0; i < s.length; i+=1){
       
       if(s[i] === s[i+1]){
+        debugger
         sum += s[i+1]
       }else{
         if(sum !== 0){
+            debugger
           result.push(sum + s[i-1])
           sum = 0
         }else{
+            debugger
           result.push(s[i])
         }
       }
