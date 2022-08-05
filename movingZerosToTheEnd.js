@@ -18,3 +18,5 @@ function moveZeros(arr) {
     let withoutZeros = arr.filter(num=>num !== 0) 
     return [...withoutZeros, ...countZeros]
     }
+
+    
