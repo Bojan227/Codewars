@@ -21,3 +21,25 @@ if j = 10:
 
 Finally, if all three animals are not present, return 'boring without all three'
 */
+
+function catMouse(x, j) {
+    const toArr = x.split('');
+  
+    const findCat = toArr.findIndex((value) => value === 'C');
+    const findMouse = toArr.findIndex((value) => value === 'm');
+    const findDog = toArr.findIndex((value) => value === 'D');
+  
+    if (findCat < 0 || findMouse < 0 || findDog < 0)
+      return 'boring without all three';
+  
+    if (findCat + j < findMouse || findCat - j > findMouse) return 'Escaped!';
+  
+    if (
+      (findDog > findCat && findDog < findMouse) ||
+      (findDog < findCat && findDog > findMouse)
+    ) {
+      return 'Protected!';
+    }
+  
+    return 'Caught!';
+  }
